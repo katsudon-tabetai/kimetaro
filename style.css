@@ -1,0 +1,221 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e0f7fa;
+    margin: 20px;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px #fff;
+    font-family: "Yusei Magic", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #333;
+}
+
+.instructions {
+    padding: 0 250px;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.controls input[type="text"] {
+    width: 200px;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.controls input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(0, 150, 150, 0.3);
+}
+
+.controls button {
+    font-size: 16px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+}
+
+/* Add button (blue) */
+#add-button {
+    background: #4fc3f7;
+}
+
+#add-button:hover {
+    background: #039be5;
+}
+
+/* Draw button */
+/* Adds a special appearance with a full-screen size */
+#choose-button {
+    background: linear-gradient(135deg, #ffa726, #fb8c00);
+    border-radius: 50px;
+    /* Pill shape */
+    padding: 10px 20px;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 42px;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+#choose-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#choose-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#item-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+#item-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    padding: 10px 15px;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.item-content {
+    flex: 1;
+    text-align: left;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button-group {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.weight-controls {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+.weight-display {
+    margin: 0 5px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    color: #000;
+}
+
+#item-list li button {
+    font-size: 14px;
+    padding: 5px 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #aed581;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+#item-list li button:hover {
+    background: #9ccc65;
+}
+
+#item-list li.highlight {
+    background: #4CAF50;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive layout for screens smaller than 500px */
+@media (max-width: 500px) {
+    .instructions {
+        padding: 0 15px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Item input field and add button on the same row */
+    .controls-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    /* Here, the item input field is larger, and the add button is smaller */
+    .controls input[type="text"] {
+        width: 70%;
+    }
+
+    #add-button {
+        width: 25%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* The draw button moves to the next row */
+    #choose-button {
+        width: 90%;
+        margin-top: 10px;
+    }
+
+    #item-list li {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .item-content {
+        margin-right: 0;
+        margin-bottom: 10px;
+        word-break: break-word;
+        text-align: center;
+    }
+
+    .button-group {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .button-group button {
+        margin-top: 5px;
+    }
+}
