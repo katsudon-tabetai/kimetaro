@@ -89,7 +89,7 @@ chooseButton.addEventListener('click', () => {
 
     let highlightIndex = 0;
     const highlightDuration = 2000;
-    const intervalTime = 100;
+    const intervalTime = 75;
     const startTime = Date.now();
 
     const lis = itemList.querySelectorAll('li');
