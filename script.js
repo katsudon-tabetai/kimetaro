@@ -110,8 +110,6 @@ chooseButton.addEventListener('click', () => {
             lis.forEach((li) => li.classList.remove('highlight'));
             lis[finalIndex].classList.add('highlight');
 
-            //alert(`結果: ${chosenItem}`);
-            //Swal.fire(`結果: ${chosenItem}`);
             Swal.fire({
                 //title: `結果: ${chosenItem}`,
                 html: `
